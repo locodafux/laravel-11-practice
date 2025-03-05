@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Welcome to Home Page</h1>
-        <button @click="logout">Logout</button>
+        <b-button @click="logout">Logout</b-button>
     </div>
 </template>
 
@@ -9,7 +9,6 @@
 export default {
     methods: {
         logout() {
-            // Send a POST request to the logout route
             this.$inertia.post('/logout')
                 .then(() => {
                     // Optionally handle any logic after successful logout
